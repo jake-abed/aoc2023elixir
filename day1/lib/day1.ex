@@ -23,10 +23,6 @@ defmodule Day1 do
     String.split(input(), "\n")
   end
 
-  defp removeAlphas string do
-    String.replace(string, ~r/[a-zA-Z]*/, "")
-  end
-
   defp getFLInt string do
     result = String.to_integer(String.first(string) <> String.last(string))
     IO.inspect(result)
