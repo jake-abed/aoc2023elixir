@@ -22,10 +22,6 @@ defmodule Day2 do
     List.flatten(Enum.map(games, fn game -> parseGame(game) end))
   end
 
-  defp convertLineToList("") do
-    [0, false]
-  end
-
   defp convertLineToList(line) do
     [head | tail] = String.split(line, ": ")
     gameInt = String.replace(head, "Game ", "") |> String.to_integer()
@@ -39,10 +35,6 @@ defmodule Day2 do
   defp formatInput(input) do
     list = String.split(input, "\n")
     Enum.map(list, fn line -> List.flatten(convertLineToList(line)) end)
-  end
-
-  def showFormattedInput do
-    formatInput(parseInput())
   end
 
   def calculateGameSum do
