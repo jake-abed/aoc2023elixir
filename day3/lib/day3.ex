@@ -17,7 +17,8 @@ defmodule Day3 do
     |> Map.new()
   end
 
-  def printInput() do
+  def print_input() do
     grab_input() |> format_input()
   end
 end
+
