@@ -5,7 +5,6 @@ defmodule Day4 do
     String.trim_trailing(i)
     |> String.split("\n")
     |> Enum.map(fn string -> String.split(string, ": ") end)
-    |> IO.inspect()
     |> Enum.map(fn [_game, ints] -> ints end)
     |> Enum.map(&String.split(&1, " | "))
     |> Enum.map(fn [winners, nums] ->
